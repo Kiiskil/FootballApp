@@ -16,3 +16,5 @@ G:\Prokkis\FootballApp\FootballAPI\obj\Debug\netcoreapp3.0\FootballAPI.AssemblyI
 G:\Prokkis\FootballApp\FootballAPI\obj\Debug\netcoreapp3.0\FootballAPI.RazorTargetAssemblyInfo.cache
 G:\Prokkis\FootballApp\FootballAPI\obj\Debug\netcoreapp3.0\FootballAPI.dll
 G:\Prokkis\FootballApp\FootballAPI\obj\Debug\netcoreapp3.0\FootballAPI.pdb
+G:\Prokkis\FootballApp\FootballAPI\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
+G:\Prokkis\FootballApp\FootballAPI\obj\Debug\netcoreapp3.0\FootballAPI.csproj.CopyComplete
