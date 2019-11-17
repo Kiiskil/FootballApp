@@ -7,6 +7,7 @@ using Microsoft.Extensions.Logging;
 using FootballAPI.Models;
 using System.Net;
 using Newtonsoft.Json;
+using System.IO;
 
 namespace FootballAPI.Controllers
 {
@@ -26,30 +27,52 @@ namespace FootballAPI.Controllers
 
         private static T _download_serialized_json_data<T>(string url) where T : new() {
             //universal method, which takes url as arg and tries to convert json from url to class, which is specified at method call. 
-            //SIIRRÄ MUUALLE; CONTROLLERIIN PREF
             using (var w = new WebClient()) {
                 var json_data = string.Empty;
                 // attempt to download JSON data as a string
                 try {
                     json_data = w.DownloadString(url);
-                    //Console.Write(json_data);
                 }
                 catch (Exception) {
-                    //Use JSON from resources
-                    Console.WriteLine("JSON not loaded!");
+                    using (StreamReader r = new StreamReader("matches_latest.json"))
+                    {
+                        json_data = r.ReadToEnd();
+                    }
+                    Console.WriteLine("JSON not loaded from web, using backup!");
                 }
                 // if string with JSON data is not empty, deserialize it to class and return its instance 
                 return !string.IsNullOrEmpty(json_data) ? JsonConvert.DeserializeObject<T>(json_data) : new T();
             }
         }  
 
-        //GET /footballmatch
+        //GET /footballmatch/
         [HttpGet]
         public ActionResult GetAllMatches(){
-            return Ok(_matches);
+            return Ok(_matches.Matches);
         }
 
-        //GET footballmatch/ID
-        //[HttpGet("{id}")]    
+        //GET /footballmatch/list/ID
+        [HttpGet("list/{id}")]
+        public ActionResult GetMatchByListID(int id){
+            Match target = _matches.Matches[id];
+            if(target != null){
+                return Ok(target);
+            }
+            else {
+                return NotFound();
+            }
+        }
+
+        //GET /footballmatch/match/ID
+        [HttpGet("match/{id}")]
+        public ActionResult GetMatchByID(int id){
+            Match target = _matches.Matches.SingleOrDefault(p => p.Id == id);
+            if(target != null){
+                return Ok(target);
+            }
+            else {
+                return NotFound();
+            }
+        }
     }
 }
