@@ -18,8 +18,8 @@ namespace FootballAPI
         {
             CreateHostBuilder(args).Build().Run();
             var url = "https://functionapp2018071101324.blob.core.windows.net/data/matches_latest.json";
-            var matches = new List<Match>();
-            matches.Add(_download_serialized_json_data<Match>(url));
+            Matchlist _matches = new Matchlist();
+            _matches.Matches = _download_serialized_json_data<List<Match>>(url);     
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -40,7 +40,7 @@ namespace FootballAPI
                     //Console.Write(json_data);
                 }
                 catch (Exception) {
-                    Console.WriteLine("BUSTED!");
+                    Console.WriteLine("JSON not loaded!");
                 }
                 // if string with JSON data is not empty, deserialize it to class and return its instance 
                 return !string.IsNullOrEmpty(json_data) ? JsonConvert.DeserializeObject<T>(json_data) : new T();
