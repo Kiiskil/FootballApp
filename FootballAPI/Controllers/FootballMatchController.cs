@@ -34,6 +34,7 @@ namespace FootballAPI.Controllers
                     json_data = w.DownloadString(url);
                 }
                 catch (Exception) {
+                    //This has not been tested yet
                     using (StreamReader r = new StreamReader("matches_latest.json"))
                     {
                         json_data = r.ReadToEnd();

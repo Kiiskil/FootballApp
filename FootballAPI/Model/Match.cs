@@ -2,13 +2,16 @@ using System;
 using System.Collections.Generic;
 
 namespace FootballAPI.Models{
+    //All models were generated using Visual Studios tool
+    //copy JSON data to clipboard, go to EDIT > Paste Special > Paste JSON as classes
+    //https://devblogs.microsoft.com/aspnet/paste-json-as-classes-in-asp-net-and-web-tools-2012-2-rc/
 
     public class Matchlist
     {
         public List<Match> Matches { get; set; }
     }
     public class Match {
-       public int Id { get; set; }
+        public int Id { get; set; }
         public object Round { get; set; }
         public int RoundNumber { get; set; }
         public DateTime MatchDate { get; set; }
