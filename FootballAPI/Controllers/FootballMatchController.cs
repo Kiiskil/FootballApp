@@ -35,6 +35,7 @@ namespace FootballAPI.Controllers
                 }
                 catch (Exception) {
                     //This has not been tested yet
+                    //TODO: check the version of resource fiel and update it if it differs from existing one.
                     using (StreamReader r = new StreamReader("matches_latest.json"))
                     {
                         json_data = r.ReadToEnd();
