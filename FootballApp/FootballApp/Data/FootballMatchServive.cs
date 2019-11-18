@@ -14,10 +14,11 @@ namespace FootballApp.Data
     public class FootballMatchService
     {
         //string url = "https://functionapp2018071101324.blob.core.windows.net/data/matches_latest.json";
-        //_matches.Matches = _download_serialized_json_data<List<Match>>(url);
-
+        public Matchlist matchlist = new Matchlist();
+        
         public static async Task<T> DownloadSerializesJsonData<T>(string url) where T : new()
         {
+           
             //universal method, which takes url as arg and tries to convert json from url to class, which is specified at method call. 
             using (var w = new WebClient())
             {

@@ -28,7 +28,7 @@ namespace FootballApp
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddSingleton<WeatherForecastService>();
+            //services.AddSingleton<WeatherForecastService>();
             services.AddSingleton<FootballMatchService>();
         }
 
