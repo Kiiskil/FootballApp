@@ -1,0 +1,8 @@
+G:\Prokkis\FootballApp\FootballApp\FootballApp\Shared\bin\Debug\netstandard2.0\FootballApp.Shared.deps.json
+G:\Prokkis\FootballApp\FootballApp\FootballApp\Shared\bin\Debug\netstandard2.0\FootballApp.Shared.dll
+G:\Prokkis\FootballApp\FootballApp\FootballApp\Shared\bin\Debug\netstandard2.0\FootballApp.Shared.pdb
+G:\Prokkis\FootballApp\FootballApp\FootballApp\Shared\obj\Debug\netstandard2.0\FootballApp.Shared.csprojAssemblyReference.cache
+G:\Prokkis\FootballApp\FootballApp\FootballApp\Shared\obj\Debug\netstandard2.0\FootballApp.Shared.AssemblyInfoInputs.cache
+G:\Prokkis\FootballApp\FootballApp\FootballApp\Shared\obj\Debug\netstandard2.0\FootballApp.Shared.AssemblyInfo.cs
+G:\Prokkis\FootballApp\FootballApp\FootballApp\Shared\obj\Debug\netstandard2.0\FootballApp.Shared.dll
+G:\Prokkis\FootballApp\FootballApp\FootballApp\Shared\obj\Debug\netstandard2.0\FootballApp.Shared.pdb
