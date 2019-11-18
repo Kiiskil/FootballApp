@@ -7,6 +7,7 @@ Iiro Laukkanen
 The point of this exercise it to create an ASP.NET Core 3 based website which displays football match results using Blazor. The data for the site is available from the following API: https://functionapp2018071101324.blob.core.windows.net/data/matches_latest.json 
 
 *Functional Requirements*
+
 The web app should include two web pages: One for showing a list of matches and one for showing details of a single match. For both pages, clean and modern UI is preferred though not required. List of matches The list view (which can be implemented as a table or as a list of some sorts) should contain all the matches available from the API. The following info should be available for each match: Date, Teams, Score.  
 The match in the list view should be clickable or each match should contain “Details”-button. When user clicks the match/the details button, web app should move to the match details page. 
 
