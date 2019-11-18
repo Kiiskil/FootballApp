@@ -108,7 +108,6 @@ G:\Prokkis\FootballApp\FootballApp\FootballApp\obj\Debug\netcoreapp3.0\FootballA
 G:\Prokkis\FootballApp\FootballApp\FootballApp\obj\Debug\netcoreapp3.0\FootballApp.RazorComponent.input.cache
 G:\Prokkis\FootballApp\FootballApp\FootballApp\obj\Debug\netcoreapp3.0\RazorDeclaration\App.razor.g.cs
 G:\Prokkis\FootballApp\FootballApp\FootballApp\obj\Debug\netcoreapp3.0\RazorDeclaration\Pages\Error.razor.g.cs
-G:\Prokkis\FootballApp\FootballApp\FootballApp\obj\Debug\netcoreapp3.0\RazorDeclaration\Pages\FetchData.razor.g.cs
 G:\Prokkis\FootballApp\FootballApp\FootballApp\obj\Debug\netcoreapp3.0\RazorDeclaration\Pages\Index.razor.g.cs
 G:\Prokkis\FootballApp\FootballApp\FootballApp\obj\Debug\netcoreapp3.0\RazorDeclaration\Pages\SingleMatch.razor.g.cs
 G:\Prokkis\FootballApp\FootballApp\FootballApp\obj\Debug\netcoreapp3.0\RazorDeclaration\Shared\MainLayout.razor.g.cs
@@ -120,7 +119,6 @@ G:\Prokkis\FootballApp\FootballApp\FootballApp\obj\Debug\netcoreapp3.0\FootballA
 G:\Prokkis\FootballApp\FootballApp\FootballApp\obj\Debug\netcoreapp3.0\FootballApp.RazorCoreGenerate.cache
 G:\Prokkis\FootballApp\FootballApp\FootballApp\obj\Debug\netcoreapp3.0\Razor\App.razor.g.cs
 G:\Prokkis\FootballApp\FootballApp\FootballApp\obj\Debug\netcoreapp3.0\Razor\Pages\Error.razor.g.cs
-G:\Prokkis\FootballApp\FootballApp\FootballApp\obj\Debug\netcoreapp3.0\Razor\Pages\FetchData.razor.g.cs
 G:\Prokkis\FootballApp\FootballApp\FootballApp\obj\Debug\netcoreapp3.0\Razor\Pages\Index.razor.g.cs
 G:\Prokkis\FootballApp\FootballApp\FootballApp\obj\Debug\netcoreapp3.0\Razor\Pages\SingleMatch.razor.g.cs
 G:\Prokkis\FootballApp\FootballApp\FootballApp\obj\Debug\netcoreapp3.0\Razor\Shared\MainLayout.razor.g.cs

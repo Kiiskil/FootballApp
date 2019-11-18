@@ -14,6 +14,31 @@
         </tr>
     </thead>
     <tbody>
+        <tr>
+            <td>@TargetMatch.MatchDate</td>
+            <td>@TargetMatch.HomeTeam.Name <img src="@TargetMatch.HomeTeam.LogoUrl" /> </td>
+            <td>@TargetMatch.HomeGoals - @TargetMatch.AwayGoals</td>
+            <td>@TargetMatch.AwayTeam.Name <img src="@TargetMatch.AwayTeam.LogoUrl" /></td>
+        </tr>
+    </tbody>
+</table>
+<table>
+    <thead>
+        <tr>
+            <th>Minute</th>
+            <th>Event</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var evt in TargetMatch.MatchEvents)
+        {
+            <tr>
+                <td>@evt.EventMinute</td>
+                <td><img src="@evt.EventTypeIcon" /></td>
+                <td>@evt.Description</td>
+            </tr>
+        }
     </tbody>
 </table>
 
@@ -22,21 +47,20 @@
     [Parameter]
     public string MatchID { get; set; }
 
-   // public Matchlist matchlist;
+    // public Matchlist matchlist;
     public Match TargetMatch;
 
 
     //Matchlist matchlist = FootBallService.matchlist;
     protected override void OnInitialized()
     {
-        //matchlist = FootballMatchService.matchlist;
-        //foreach (Match match in matchlist.Matches)
-        //{
-        //    if (match.Id == Int32.Parse(MatchID))
-        //    {
-        //        match = match;
-        //    }
-        //}
+        foreach (Match match in Matchlist.Matches)
+        {
+            if (match.Id == Int32.Parse(MatchID))
+            {
+                TargetMatch = match;
+            }
+        }
     }
 
 }
