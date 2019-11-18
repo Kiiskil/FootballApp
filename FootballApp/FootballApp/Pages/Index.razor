@@ -8,15 +8,19 @@
 
 <h1>Football Matches</h1>
 
-@if (Matchlist.Matches == null)
+@if (matchlist == null)
 {
     <p><em>Loading...</em></p>
 }
 else
 {
+    <input placeholder="Search" @bind="SearchText"/>
+    <button @onclick="Search">Search</button>
+
     <table class="table">
         <thead>
             <tr>
+                <th>#</th>
                 <th>Date</th>
                 <th>HomeTeam</th>
                 <th>Score</th>
@@ -24,9 +28,10 @@ else
             </tr>
         </thead>
         <tbody>
-            @foreach (var match in Matchlist.Matches)
+            @foreach (Match match in matchlist)
             {
                 <tr @onclick="(()=> GetMatch(match))">
+                    <td>@Matchlist.Matches.IndexOf(match)</td>
                     <td>@match.MatchDate</td>
                     <td>@match.HomeTeam.Name</td>
                     <td>@match.HomeGoals - @match.AwayGoals</td>
@@ -39,10 +44,19 @@ else
 
 @code {
     public int MatchID { get; set; }
+    public string SearchText;
+    public List<Match> matchlist = new List<Match>();
 
     protected override async Task OnInitializedAsync()
     {
         Matchlist.Matches = await FootballMatchService.DownloadSerializesJsonData<List<Match>>();
+        if(Matchlist.Matches != null)
+        {
+            foreach(Match match in Matchlist.Matches)
+            {
+                matchlist.Add(match);
+            }
+        }
     }
 
     private void GetMatch(FootballApp.Models.Match match)
@@ -51,14 +65,30 @@ else
         MatchID = match.Id;
         NavigationManager.NavigateTo("/single/" + MatchID);
     }
-
-    //public async Task<IActionResult> OnPostAsync(int id)
-    //{
-    //    Submission = _SubmissionContext.Submissions
-    //                    .Where(s => s.ID == id).First();
-    //    Submission.AssignedTo = Assignee;
-    //    await _SubmissionContext.SaveChangesAsync();
-
-    //    return RedirectToRoute("./ProjectDetails", new { id = Submission.ID });
-    //}
+    //TODO: add a filter for the match list using a single textbox
+    private void Search()
+    {
+        if (!string.IsNullOrWhiteSpace(SearchText))
+        {
+            SearchText = SearchText.ToLower();
+            foreach(Match match in Matchlist.Matches)
+            {
+                matchlist.Add(match);
+            }
+            foreach(Match match in matchlist.ToList())
+            {
+                if(!match.HomeTeam.Name.ToLower().Contains(SearchText) & !match.AwayTeam.Name.ToLower().Contains(SearchText))
+                {
+                    matchlist.Remove(match);
+                }
+            }
+        }
+        else
+        {
+            foreach(Match match in Matchlist.Matches)
+            {
+                matchlist.Add(match);
+            }
+        }
+    }
 }
