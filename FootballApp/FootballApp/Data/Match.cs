@@ -6,9 +6,9 @@ namespace FootballApp.Models{
     //copy JSON data to clipboard, go to EDIT > Paste Special > Paste JSON as classes
     //https://devblogs.microsoft.com/aspnet/paste-json-as-classes-in-asp-net-and-web-tools-2012-2-rc/
 
-    public class Matchlist
+    public static class Matchlist
     {
-        public List<Match> Matches { get; set; }
+        public static List<Match> Matches { get; set; }
     }
     public class Match {
         public int Id { get; set; }

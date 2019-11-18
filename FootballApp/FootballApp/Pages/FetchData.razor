@@ -8,7 +8,7 @@
 
 <h1>Football Matches</h1>
 
-@if (matchlist == null)
+@if (Matchlist.Matches == null)
 {
     <p><em>Loading...</em></p>
 }
@@ -24,7 +24,7 @@ else
             </tr>
         </thead>
         <tbody>
-            @foreach (var match in matchlist.Matches)
+            @foreach (var match in Matchlist.Matches)
             {
                 <tr @onclick="(()=> GetMatch(match))">
                     <td>@match.MatchDate</td>
@@ -40,12 +40,10 @@ else
 @code {
     string url = "https://functionapp2018071101324.blob.core.windows.net/data/matches_latest.json";
     public int MatchID { get; set; }
-    Matchlist matchlist;
 
     protected override async Task OnInitializedAsync()
     {
-        FootballService.matchlist.Matches = await FootballMatchService.DownloadSerializesJsonData<List<Match>>(url);
-        matchlist = FootballService.matchlist;
+        Matchlist.Matches = await FootballMatchService.DownloadSerializesJsonData<List<Match>>(url);
     }
 
     private void GetMatch(FootballApp.Models.Match match)

@@ -14,7 +14,7 @@ namespace FootballApp.Data
     public class FootballMatchService
     {
         //string url = "https://functionapp2018071101324.blob.core.windows.net/data/matches_latest.json";
-        public Matchlist matchlist = new Matchlist();
+        //public Matchlist matchlist = new Matchlist();
         
         public static async Task<T> DownloadSerializesJsonData<T>(string url) where T : new()
         {
