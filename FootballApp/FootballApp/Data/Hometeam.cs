@@ -1,7 +1,5 @@
-namespace FootballApp.Data
-{
-    public class Awayteam
-    {
+namespace FootballApp.Models{
+    public class Hometeam {
         public int Id { get; set; }
         public string Name { get; set; }
         public string FullName { get; set; }

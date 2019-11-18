@@ -4,12 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using FootballApp.Data;
+using FootballApp.Models;
 using System.Net;
 using Newtonsoft.Json;
 using System.IO;
 
-namespace FootballApp.Data
+namespace FootballApp.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -21,13 +21,12 @@ namespace FootballApp.Data
         public FootballMatchController(ILogger<FootballMatchController> logger)
         {
             _logger = logger;
-            //var url = "https://functionapp2018071101324.blob.core.windows.net/data/matches_latest.json";
-            //_matches.Matches = _download_serialized_json_data<List<Match>>(url); 
+            var url = "https://functionapp2018071101324.blob.core.windows.net/data/matches_latest.json";
+            _matches.Matches = _download_serialized_json_data<List<Match>>(url); 
         }
 
-        public T _download_serialized_json_data<T>(string url) where T : new() {
-            //Need to be async method?
-            //universal method, which takes url as arg and tries to convert json from url to class, which is specified at method call.
+        private static T _download_serialized_json_data<T>(string url) where T : new() {
+            //universal method, which takes url as arg and tries to convert json from url to class, which is specified at method call. 
             using (var w = new WebClient()) {
                 var json_data = string.Empty;
                 // attempt to download JSON data as a string

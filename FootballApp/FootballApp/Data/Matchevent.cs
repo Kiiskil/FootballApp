@@ -1,4 +1,4 @@
-namespace FootballApp.Data{
+namespace FootballApp.Models{
     public class Matchevent
     {
         public int Id { get; set; }
