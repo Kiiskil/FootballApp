@@ -24,7 +24,7 @@ Latest version of Visual Studio 2019 is needed. Community Version is available f
 
 *RESULTS*
 
-I made two different projects for this. Bacuse Blazor was a new technology for me, I opted to do API first and figure out how to make UI with Blazor on top of it later.
+I made two different projects for this. Because Blazor was a new technology for me, I opted to do API first and figure out how to make UI with Blazor on top of it later.
 
 API:
 Simple REST-API (.NET Core 3.0) that fetches a list of footballmatches from https://functionapp2018071101324.blob.core.windows.net/data/matches_latest.json as JSON and handles it through GET-requests.
