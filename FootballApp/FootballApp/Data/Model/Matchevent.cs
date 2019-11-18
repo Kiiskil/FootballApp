@@ -1,4 +1,4 @@
-namespace FootballAPI.Models{
+namespace FootballApp.Data{
     public class Matchevent
     {
         public int Id { get; set; }

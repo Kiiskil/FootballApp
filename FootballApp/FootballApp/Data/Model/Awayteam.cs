@@ -1,4 +1,5 @@
-namespace FootballAPI.Models{
+namespace FootballApp.Data
+{
     public class Awayteam
     {
         public int Id { get; set; }

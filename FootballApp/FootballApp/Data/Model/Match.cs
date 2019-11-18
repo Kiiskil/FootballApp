@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace FootballAPI.Models{
+namespace FootballApp.Data{
     //All models were generated using Visual Studios tool
     //copy JSON data to clipboard, go to EDIT > Paste Special > Paste JSON as classes
     //https://devblogs.microsoft.com/aspnet/paste-json-as-classes-in-asp-net-and-web-tools-2012-2-rc/

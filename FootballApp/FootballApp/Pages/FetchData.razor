@@ -2,6 +2,7 @@
 
 @using FootballApp.Data
 @inject WeatherForecastService ForecastService
+@inject FootballService  FootballService
 
 <h1>Weather forecast</h1>
 
@@ -13,7 +14,7 @@
 }
 else
 {
-    <table class="table">
+    <!--<table class="table">
         <thead>
             <tr>
                 <th>Date</th>
@@ -33,14 +34,29 @@ else
                 </tr>
             }
         </tbody>
+    </table>-->
+    <table class="table">
+        <tbody>
+            @foreach (var match in _matches.Matches)
+            {
+                <tr>
+                    <td>@match.Id</td>
+                </tr>
+            }
+        </tbody>
     </table>
 }
 
 @code {
     WeatherForecast[] forecasts;
+    Matchlist _matches = new Matchlist();
+    string url = "https://functionapp2018071101324.blob.core.windows.net/data/matches_latest.json";
 
     protected override async Task OnInitializedAsync()
     {
+        
         forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
+        //Need to be async method?
+        _matches.Matches = FootballService._download_serialized_json_data<List<Match>>(url); 
     }
 }
