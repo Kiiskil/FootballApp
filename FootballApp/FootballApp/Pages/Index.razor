@@ -38,12 +38,11 @@ else
 }
 
 @code {
-    string url = "https://functionapp2018071101324.blob.core.windows.net/data/matches_latest.json";
     public int MatchID { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
-        Matchlist.Matches = await FootballMatchService.DownloadSerializesJsonData<List<Match>>(url);
+        Matchlist.Matches = await FootballMatchService.DownloadSerializesJsonData<List<Match>>();
     }
 
     private void GetMatch(FootballApp.Models.Match match)
