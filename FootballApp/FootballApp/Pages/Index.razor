@@ -44,8 +44,8 @@ else
 
 @code {
     public int MatchID { get; set; }
-    public string SearchText;
-    public List<Match> matchlist = new List<Match>();
+    private string SearchText;
+    private List<Match> matchlist = new List<Match>();
 
     protected override async Task OnInitializedAsync()
     {
