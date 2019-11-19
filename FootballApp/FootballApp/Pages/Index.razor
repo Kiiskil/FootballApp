@@ -49,6 +49,7 @@ else
 
     protected override async Task OnInitializedAsync()
     {
+        //Populate static Matchlist-class with data from external JSON
         Matchlist.Matches = await FootballMatchService.DownloadSerializesJsonData<List<Match>>();
         if(Matchlist.Matches != null)
         {
@@ -65,7 +66,7 @@ else
         MatchID = match.Id;
         NavigationManager.NavigateTo("/single/" + MatchID);
     }
-    //TODO: add a filter for the match list using a single textbox
+    
     private void Search()
     {
         if (!string.IsNullOrWhiteSpace(SearchText))

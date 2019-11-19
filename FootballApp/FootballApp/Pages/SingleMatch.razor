@@ -54,11 +54,9 @@
     [Parameter]
     public string MatchID { get; set; }
 
-    // public Matchlist matchlist;
     public Match TargetMatch;
 
-
-    //Matchlist matchlist = FootBallService.matchlist;
+    //Searches the static Matchlist-class for match with indentical ID to MatchID
     protected override void OnInitialized()
     {
         foreach (Match match in Matchlist.Matches)

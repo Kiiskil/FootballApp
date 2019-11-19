@@ -16,7 +16,7 @@ namespace FootballApp.Data
         public static async Task<T> DownloadSerializesJsonData<T>() where T : new()
         {
             string url = "https://functionapp2018071101324.blob.core.windows.net/data/matches_latest.json";
-            //universal method, which takes url as arg and tries to convert json from url to class, which is specified at method call. 
+            //universal async (Task) method, which takes url as arg and tries to convert json from url to class, which is specified at method call. 
             using (var w = new WebClient())
             {
                 var json_data = string.Empty;
@@ -28,7 +28,7 @@ namespace FootballApp.Data
                 catch (Exception)
                 {
                     //This has not been tested yet
-                    //TODO: check the version of resource fiel and update it if it differs from existing one.
+                    //TODO: check the version of resource file and update it if it differs from existing one.
                     using (StreamReader r = new StreamReader("matches_latest.json"))
                     {
                         json_data = r.ReadToEnd();
