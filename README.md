@@ -48,3 +48,5 @@ Even more of the API code can be used if app is done as Blazor WebAssembly inste
 
 Todo:
 Clean the UI, as it is in default state right now.
+![Index](FootballApp/index_19112019.PNG)
+![SingleMatch](FootballApp/single_match_19112019.PNG)
