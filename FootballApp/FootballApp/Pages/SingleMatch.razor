@@ -3,7 +3,13 @@
 @using FootballApp.Data
 @using FootballApp.Models
 
-<h1>Match ID @MatchID</h1>
+<div class="float-left">
+    <h1>Match ID @MatchID</h1>
+</div>
+<div class="float-right">
+    <img src="@TargetMatch.HomeTeam.LogoUrl" width="80" alt="@TargetMatch.HomeTeam.Name" /> VS
+    <img src="@TargetMatch.AwayTeam.LogoUrl" width="80" alt="@TargetMatch.AwayTeam.Name" />
+</div>
 
 <table class="table table-bordered">
     <thead class="thead-dark">
@@ -17,9 +23,9 @@
     <tbody>
         <tr align="center">
             <td>@TargetMatch.MatchDate</td>
-            <td>@TargetMatch.HomeTeam.Name  <img src="@TargetMatch.HomeTeam.LogoUrl" width="80" alt="@TargetMatch.HomeTeam.Name" /></td>
-            <td>@TargetMatch.HomeGoals - @TargetMatch.AwayGoals</td>
-            <td>@TargetMatch.AwayTeam.Name <img src="@TargetMatch.AwayTeam.LogoUrl" width="80" alt="@TargetMatch.AwayTeam.Name" /></td>
+            <td>@TargetMatch.HomeTeam.Name </td>
+            <td class="font-weight-bold">@TargetMatch.HomeGoals - @TargetMatch.AwayGoals</td>
+            <td>@TargetMatch.AwayTeam.Name</td>
         </tr>
     </tbody>
 </table>
