@@ -30,7 +30,7 @@ I made two different projects for this, FootballAPI and FootballApp. Because Bla
 FootballApp:
 Second project is single Blazor Server App (.NET Core 3.0), named FootballApp. Blazor was very nice to work with and I decided to make whole project with it. I was able to reuse some of code from API, but much is new. The app fetches data as JSON from provided URL and displays it on two pages as requested.
 
-Even more of the API code can be used if app is done as Blazor WebAssembly instead of Blazor Web Server, but that requires .NET Core SDK 3.1, which is preview-version at the moment. This app can be tested ![HERE](https://footballapp.azurewebsites.net), as it runs on Azure as App Service.
+Even more of the API code can be used if app is done as Blazor WebAssembly instead of Blazor Web Server, but that requires .NET Core SDK 3.1, which is preview-version at the moment. This app can be tested [HERE](https://footballapp.azurewebsites.net), as it runs on Azure as App Service.
 
 Todo:
 Clean the UI, as it is in default state right now.
