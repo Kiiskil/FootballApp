@@ -1,6 +1,7 @@
 # FootballApp
 Iiro Laukkanen
 18.11.2019
+[DEMO](https://footballapp.azurewebsites.net)
 
 *Blazor & .NET Core Exercise*
 
@@ -18,8 +19,6 @@ Details of a single match The details page of a single match should contain the 
 
 Required technologies are C# and ASP.NET Core 3’s Blazor. You can create a single web app which handles everything, or you can split the app into two ASP.NET Core projects: One for the backend (Web Api server) and one for the UI (Blazor). Tests are optional. It’s OK to use 3rd party libraries and Nuget packages. You can use CSS frameworks if you want. Blazor templates by default use Bootstrap 4. 
 Tools JSONLint can be used to understand the structure of the data: https://functionapp2018071101324.blob.core.windows.net/data/matches_latest.json. 
-
-Latest version of Visual Studio 2019 is needed. Community Version is available for free. Blazor documentation is available from https://docs.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore3.0. For Blazor, make sure to use the Server version of it.
 
 
 *RESULTS*
