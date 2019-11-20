@@ -31,7 +31,8 @@ Second project is single Blazor Server App (.NET Core 3.0), named FootballApp. B
 Even more of the API code can be used if app is done as Blazor WebAssembly instead of Blazor Web Server, but that requires .NET Core SDK 3.1, which is preview-version at the moment. This app can be tested [HERE](https://footballapp.azurewebsites.net), as it runs on Azure as App Service.
 
 Todo:
-Clean the UI, as it is in default state right now.
+- Clean the UI, as it is in default state right now.
+- Optimize for mobile
 ![Index](FootballApp/index_19112019.PNG)
 ![SingleMatch](FootballApp/single_match_19112019.PNG)
 
