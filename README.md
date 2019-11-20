@@ -1,7 +1,6 @@
-# FootballApp
+# [FootballApp](https://footballapp.azurewebsites.net)
 Iiro Laukkanen
 18.11.2019
-[DEMO](https://footballapp.azurewebsites.net)
 
 *Blazor & .NET Core Exercise*
 
